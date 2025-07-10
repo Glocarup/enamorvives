@@ -47,7 +47,7 @@ img {
 /* ENCABEZADO */
   header {
     background-color: #613A6E;
-    padding: 1em;
+    padding: 6.5%;
     font-family: "Crimson Pro", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -63,6 +63,17 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+
+/* Logo superpuesto entre header y contenido */
+.logo-superpuesto {
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  z-index: 9999;
+}
+
 
 
   /* MENÚ PRINCIPAL */
@@ -678,8 +689,9 @@ position: absolute;
         color: #FBF8DC;
         font-family: "Crimson Pro", serif;
         text-align: center;
-        padding: 1.5em;
+        padding: 0.5em;
         font-size: x-large;
+        margin: 1em;
         }
 
     #mensajefinal {
@@ -691,6 +703,7 @@ position: absolute;
     margin-left: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
+    padding-top: 4em;
 
   }
 
@@ -868,7 +881,7 @@ position: absolute;
   }
 
 
-  /* ===================== TABLET ===================== */
+   /* ===================== TABLET ===================== */
 @media (min-width: 768px) {
 
   /* el menú deja de ser fijo */
@@ -877,37 +890,8 @@ position: absolute;
     position: relative;
   }
 
-  #logo{
-    width: 6em;
-  }
     
-  /* botón "hamburguesa" oculto */
-  .menu-btn {
-    display: none;
-  }
-
-  /* menu visible */
-  header nav ul,
-  header .menuVisible ul {
-    /* caja flexible para menu horizontal*/
-    display: flex;
-    /* separación entre sus elementos */
-    gap: .25em;
-
-    /* para que esté en capa superior pero que no parezca */
-    position: relative;
-
-    /* elimina desplazamiento */
-    translate: 0;
-
-    /* elimina fondo */
-    background-color: unset;
-  }
-    
-  /* items de lista  que contienen los vínculos del menu */
-  header nav ul li {
-    min-width: 4em; /* que no midan menos de: */
-  }
+ 
 
   /* vínculos del menu principal */
   header nav ul li a {
@@ -989,12 +973,6 @@ position: absolute;
     flex-direction: column;
     justify-content: center;
   }
-
-
-
-
-
-
 
 .grid-dos img {
   width: 100%;
@@ -1226,6 +1204,49 @@ position: absolute;
     margin: 1em;
   }
 
+  #logo {
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+header {
+  position: relative;
+  padding-bottom: 2em;
+  padding-top: 8em;
+}
+
+   /* botón "hamburguesa" oculto */
+  .menu-btn {
+    display: none;
+  }
+
+  /* menu visible */
+  header nav ul,
+  header .menuVisible ul {
+    /* caja flexible para menu horizontal*/
+    display: flex;
+    /* separación entre sus elementos */
+    gap: .25em;
+
+    /* para que esté en capa superior pero que no parezca */
+    position: relative;
+
+    /* elimina desplazamiento */
+    translate: 0;
+
+    /* elimina fondo */
+    background-color: unset;
+  }
+    
+  /* items de lista  que contienen los vínculos del menu */
+  header nav ul li {
+    min-width: 4em; /* que no midan menos de: */
+  }
 
 
  .grid-dos {
